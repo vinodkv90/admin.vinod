@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_header_menus",
+  "info": {
+    "displayName": "Menu"
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "component",
+      "component": "common.button",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

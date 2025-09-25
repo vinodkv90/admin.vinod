@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_about_my_experiences",
+  "info": {
+    "displayName": "My Experience"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "experience": {
+      "type": "component",
+      "component": "contact.experience",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

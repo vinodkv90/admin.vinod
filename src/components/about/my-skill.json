@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_about_my_skills",
+  "info": {
+    "displayName": "My Skill"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "skills": {
+      "type": "component",
+      "component": "about.skill",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_contact_follows",
+  "info": {
+    "displayName": "Follow"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "links": {
+      "type": "component",
+      "component": "common.button",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

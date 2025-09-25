@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_contact_experiences",
+  "info": {
+    "displayName": "Experience"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "designation": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
