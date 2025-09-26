@@ -11,9 +11,9 @@ export default factories.createCoreService('api::project-listing.project-listing
       status: 'published',
       populate: {
         projects: {
-            populate: {
-                image: true
-            }
+          populate: {
+            image: true
+          }
         }
       },
       orderBy: { createdAt: 'DESC' }
@@ -23,10 +23,10 @@ export default factories.createCoreService('api::project-listing.project-listing
         description: data?.description,
         projects: data?.projects?.map(item => {
             return {
-                title: item?.title,
-                description: item?.description,
-                image: item?.image ? createHelpers(strapi).getImage(item?.image) : null,
-                is_large: item?.is_large,
+              title: item?.title,
+              description: item?.description,
+              image: item?.image ? createHelpers(strapi).getImage(item?.image) : null,
+              is_large: item?.is_large,
             }
         }) || []
     };
