@@ -93,6 +93,20 @@ export interface ContactFollow extends Struct.ComponentSchema {
   };
 }
 
+export interface EmailMail extends Struct.ComponentSchema {
+  collectionName: 'components_email_mail';
+  info: {
+    displayName: 'mail';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    links: Schema.Attribute.Component<'common.button', true>;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    message: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface HeaderLogo extends Struct.ComponentSchema {
   collectionName: 'components_header_logos';
   info: {
@@ -152,6 +166,7 @@ declare module '@strapi/strapi' {
       'common.button': CommonButton;
       'contact.experience': ContactExperience;
       'contact.follow': ContactFollow;
+      'email.mail': EmailMail;
       'header.logo': HeaderLogo;
       'header.menu': HeaderMenu;
       'home.hero': HomeHero;

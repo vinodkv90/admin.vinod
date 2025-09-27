@@ -18,7 +18,9 @@
     "@strapi/plugin-cloud": "5.23.6",
     "@strapi/plugin-users-permissions": "5.23.6",
     "@strapi/strapi": "5.23.6",
+    "handlebars": "^4.7.8",
     "node-html-parser": "^7.0.1",
+    "nodemailer": "^7.0.6",
     "pg": "8.8.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -26,6 +28,7 @@
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
+    "@types/joi": "^17.2.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

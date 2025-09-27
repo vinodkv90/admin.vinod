@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_email_mail",
+  "info": {
+    "displayName": "mail"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "message": {
+      "type": "string"
+    },
+    "links": {
+      "type": "component",
+      "component": "common.button",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
