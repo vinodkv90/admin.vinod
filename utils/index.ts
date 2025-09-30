@@ -25,7 +25,7 @@ export const COLLECTION_TYPE = "collectionType";
 export const URL_SUFFIXES = {
   EXPERIENCE: "experiences/",
 };
-export const baseUrl = process.env.BASE_URL ?? "http://192.168.1.6:1337";
+export const baseUrl = process.env.BASE_URL ?? "https://mindful-wealth-26c18ca11f.strapiapp.com";
 export const frontEndUrl = process.env.FRONTEND_URL ?? "http://192.168.1.6:3000";
 
 type AnyObj = Record<string, any>;

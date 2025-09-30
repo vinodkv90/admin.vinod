@@ -28,7 +28,7 @@ export const sendMail = async (to: string, subject: string, name: string) => {
     }
   })
 
-  const from = process.env.SMTP_FROM || ""
+  const from = process.env.SMTP_FROM || "vinodkv.developer@gmail.com"
 
   const templatePath = path.join(
     process.cwd(),
