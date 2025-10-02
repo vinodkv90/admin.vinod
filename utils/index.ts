@@ -167,7 +167,7 @@ export default function createHelpers(strapi: Core.Strapi) {
       return img
         ? {
             id: img.id,
-            url: `${baseUrl}${img.url ?? ""}`,
+            url: `${img.url ?? ""}`,
             alternativeText: img?.alternativeText ?? "A featured image for this section",
             width: img?.width ?? null,
             height: img?.height ?? null,
