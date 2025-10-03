@@ -20,9 +20,10 @@ export default {
       data: {
         title: widget?.title,
         links: widget?.links?.map((link: any) => ({
-          title: link.title,
+          name: link.name,
           url: link.url,
-          icon: link.icon
+          icon: link.icon,
+          external: link.external ?? false
         }))
       },
       component: widget?.__component
