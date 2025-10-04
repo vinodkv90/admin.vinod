@@ -1,6 +1,6 @@
 import { Core } from '@strapi/strapi';
-import seo from './seo';
 import componentProcessor from './componentProcessor';
+import seoStructure from './seoStructure';
 
 export interface GetPageDataOptions {
   uid: string;
@@ -39,7 +39,7 @@ export default ({ strapi }: { strapi: Core.Strapi }) => ({
 
     let seoData = {};
     if(data?.seo) {
-      seoData = await seo(strapi).seoStructure(data?.seo);
+      seoData = await seoStructure(data?.seo);
     }
 
     const response: CommonResponse = {

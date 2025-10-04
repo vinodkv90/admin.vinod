@@ -10,22 +10,33 @@ export default factories.createCoreController('api::home.home', ({strapi}) => ({
         const data = await strapi.documents('api::home.home').findFirst({
             status: 'published',
             populate: {
+                seo: {
+                    populate: {
+                        metaImage: true,
+                        openGraph: {
+                            populate: {
+                                ogImage: true
+                            }
+                        },
+                    }
+                },
                 widgets: {
-                on: {
-                    "home.hero": {
-                        populate: {
-                            image: true
-                        }
-                    },
-                    "contact.follow": {
-                        populate: {
-                            links: true
-                        }
-                    },
+                    on: {
+                        "home.hero": {
+                            populate: {
+                                image: true
+                            }
+                        },
+                        "contact.follow": {
+                            populate: {
+                                links: true
+                            }
+                        },
+                    }
                 }
             }
-            }
         });
+
         const parsedData = await queryProcessor({ strapi }).getCommonResponse(data);
         return parsedData;
     },

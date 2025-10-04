@@ -26,6 +26,11 @@
         "about.my-skill",
         "contact.follow"
       ]
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }
