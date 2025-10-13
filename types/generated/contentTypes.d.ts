@@ -519,7 +519,7 @@ export interface ApiHeaderHeader extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     logo: Schema.Attribute.Component<'header.logo', false>;
-    Menu: Schema.Attribute.Component<'header.menu', false>;
+    menu: Schema.Attribute.Component<'common.button', true>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -608,6 +608,37 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::project.project'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'title'>;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    widgets: Schema.Attribute.DynamicZone<['projects.technologies']>;
+  };
+}
+
+export interface ApiTechnologyTechnology extends Struct.CollectionTypeSchema {
+  collectionName: 'technologies';
+  info: {
+    displayName: 'technology';
+    pluralName: 'technologies';
+    singularName: 'technology';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::technology.technology'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
@@ -1135,6 +1166,7 @@ declare module '@strapi/strapi' {
       'api::home.home': ApiHomeHome;
       'api::project-listing.project-listing': ApiProjectListingProjectListing;
       'api::project.project': ApiProjectProject;
+      'api::technology.technology': ApiTechnologyTechnology;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

@@ -16,15 +16,15 @@
       "component": "header.logo",
       "repeatable": false
     },
-    "Menu": {
-      "type": "component",
-      "component": "header.menu",
-      "repeatable": false
-    },
     "contact_button": {
       "type": "component",
       "component": "common.button",
       "repeatable": false
+    },
+    "menu": {
+      "type": "component",
+      "component": "common.button",
+      "repeatable": true
     }
   }
 }

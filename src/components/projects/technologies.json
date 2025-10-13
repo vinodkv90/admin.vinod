@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_projects_technologies",
+  "info": {
+    "displayName": "Technologies"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "technologies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::technology.technology"
+    }
+  },
+  "config": {}
+}

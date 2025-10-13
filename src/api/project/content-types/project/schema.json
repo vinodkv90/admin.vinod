@@ -24,11 +24,21 @@
     "title": {
       "type": "string"
     },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
     "description": {
       "type": "text"
     },
     "is_large": {
       "type": "boolean"
+    },
+    "widgets": {
+      "type": "dynamiczone",
+      "components": [
+        "projects.technologies"
+      ]
     }
   }
 }

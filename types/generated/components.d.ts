@@ -155,6 +155,20 @@ export interface ProjectsProject extends Struct.ComponentSchema {
   };
 }
 
+export interface ProjectsTechnologies extends Struct.ComponentSchema {
+  collectionName: 'components_projects_technologies';
+  info: {
+    displayName: 'Technologies';
+  };
+  attributes: {
+    technologies: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::technology.technology'
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedOpenGraph extends Struct.ComponentSchema {
   collectionName: 'components_shared_open_graphs';
   info: {
@@ -222,6 +236,7 @@ declare module '@strapi/strapi' {
       'header.menu': HeaderMenu;
       'home.hero': HomeHero;
       'projects.project': ProjectsProject;
+      'projects.technologies': ProjectsTechnologies;
       'shared.open-graph': SharedOpenGraph;
       'shared.seo': SharedSeo;
     }
