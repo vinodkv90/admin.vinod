@@ -4,7 +4,7 @@
 
 import { factories } from '@strapi/strapi';
 import Joi from "joi";
-import { sendMail } from '../../../../utils/sendMail';
+// import { sendMail } from '../../../../utils/sendMail';
 import { sendMailAdmin } from '../../../../utils/senMailAdmin';
 
 export default factories.createCoreService('api::contact-form.contact-form', ({ strapi }) => ({
@@ -36,7 +36,7 @@ export default factories.createCoreService('api::contact-form.contact-form', ({ 
             if(data) {
                 await sendMailAdmin(process.env.SMTP_FROM, 'New Enquiry Recieved!', { name, email, phone, sub: subject, message });
                 await delay(3000);
-                await sendMail(email, 'Thank you for contacting, will get back to you shortly.', name);
+                // await sendMail(email, 'Thank you for contacting, will get back to you shortly.', name);
                 return ctx.send({ message: "Successfully saved!" });
             }
 
